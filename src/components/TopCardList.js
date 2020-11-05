@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/topcardlist.css';
 import Card from './Card';
 
 const cardListData = [

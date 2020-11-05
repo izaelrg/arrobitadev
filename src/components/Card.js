@@ -14,7 +14,7 @@ function Card({username, followers, todayFollowers, icon, name}) {
         <span className="card-followers-title">Followers</span>
       </p>
       <p className="card-today">
-        <img src="images/icon-up.svg" alt="" />
+        <img src="img/icon-up.svg" alt="" />
             {todayFollowers} Today
           </p>
     </article>

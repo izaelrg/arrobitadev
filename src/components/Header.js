@@ -2,7 +2,7 @@ import React from 'react';
 import './css/header.css';
 import Switch from './Switch';
 
-function Header() {
+function Header({children}) {
   return (
     <header className="header">
     <div className="wrapper">
@@ -11,7 +11,7 @@ function Header() {
           <h1>arrobitadev Dashboard</h1>
           <p className="header-total">Total Followers: 23, 004</p>
         </div>
-        <Switch />
+        {children}
       </div>
     </div>
   </header>

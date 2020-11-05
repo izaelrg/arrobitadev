@@ -1,6 +1,9 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+}
+
+main {
   color: var(--baseColor);
   background: var(--baseBackground);
 }
@@ -31,6 +34,45 @@ body {
   grid-row-gap: 25px;
 }
 
+h2 {
+  color: var(--gray)
+}
+
+.is-dark-mode {
+  --cardGray: #252b43;
+  --baseBackground: #1d2029;
+  --baseColor: white;
+  --gray: #8088ad;
+  --lightGray: #1d2029;
+  --cardTitle: #8088ad;
+  --switchSpinner: #282943;
+  --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+}
+
+.is-light-mode {
+  --gray: #5f616d;
+  --cardGray: #f0f3fa;
+  --lightGray: #f8f9fe;
+  --cardTitle: #6f717e;
+  --baseBackground: white;
+  --baseColor: #1d2029;
+  --switchSpinner: white;
+  --switch: #5f616d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cardGray: #252b43;
+    --baseBackground: #1d2029;
+    --baseColor: white;
+    --gray: #8088ad;
+    --lightGray: #1d2029;
+    --cardTitle: #8088ad;
+    --switchSpinner: #282943;
+    --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+  }
+}
+
 @media screen and (min-width: 480px) {
   .grid {
     grid-template-columns: 1fr 1fr;
@@ -45,5 +87,18 @@ body {
 @media screen and (min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .header-total {
+    border: none;
+  }
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
   }
 }
