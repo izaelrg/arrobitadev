@@ -1,16 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './globals.css';
+import Header from './components/Header';
+import TopCardList from './components/TopCardList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          arrobitadev 🚀
-        </p>
-      </header>
-    </div>
+    <>
+      <Header />
+      <TopCardList />
+    </>
   );
 }
 
